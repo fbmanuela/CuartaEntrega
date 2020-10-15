@@ -1,0 +1,382 @@
+@import "colores";
+
+header {
+	background-color: $darkgray;
+    display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	padding: 20px 40px;
+
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	z-index: 10;
+	
+}
+
+body {
+   width: 100%;
+    background: $lightgray;
+    font-style: normal;
+    font-size: 1em;
+    color: var(--gray);
+    
+    }
+
+
+.row{
+    justify-content: center !important;
+}
+
+.menu-link{
+    color:$white;
+    text-decoration-line: none;
+    font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+
+
+table {
+    border-radius: 8px;
+    border: 2px solid $white;
+    display: inline-block;
+    margin: 16px;
+ }
+
+th, td {
+    
+    border: 1px solid #4F4F4F;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+form{
+    width: 800px;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+ul li{
+    color:#7487F2;
+    display: inline-block;
+}
+
+h1{
+
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: #4F4F4F;
+}
+
+h2 {
+    color: #4F4F4F;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+h3 {
+    color: #4F4F4F;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+p {
+    color: $darkgray;
+    font-family:Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
+
+.inputtext {
+    width: 280px;
+    height: 40px;
+    transition: all 2s;
+
+}
+
+.inputtext :focus {
+    width: 400px;
+    font-size: 24px;
+
+}
+
+.gallery {
+    justify-content: space-between;
+    display: flex;
+    
+
+}
+
+.gallery img {
+    height: 400px;
+}
+
+.containterabout {
+    
+    background-color: #1B2123;
+}
+
+.card {
+    width: 360px !important;
+    border-radius: 4px;
+    background-color: $white;
+    margin: 50px 20px;
+    padding: 30px 30px;
+    transition: 0.4s ease-out !important; 
+  }
+
+
+.AboutDescription {
+    background-color: $darkgray;
+    padding: 100px 50px 0px 50px;
+    justify-content: center;
+    display: flex;
+
+}
+
+.AboutDescription h1 {
+    
+    width: 400px;
+    color: #ffffff;
+    
+}
+
+.AboutDescription h3 {
+    width: 400px;
+    color: #ffffff;
+    
+}
+
+.AboutDescription h4 {
+    color: $purple;
+    font-family:Roboto, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+
+}
+
+.AboutDescription p {
+    width: 500px;
+    color:$white;
+}
+
+
+
+.card {
+ 
+
+    border-radius: 8px;
+    background-color:$white;
+    margin: 50px 50px;
+    padding: 30px 30px;
+    transition: 0.4s ease-out !important;
+
+        h3{
+            color: $white !important;
+            background-color: $purple;
+            border-radius: 4px;
+            padding: 6px 12px; 
+        
+        } 
+
+    
+        li{
+            color:$darkgray;
+            font-family: Roboto;
+            line-height: 36px;
+        }
+}
+
+
+
+
+.button {
+    background-color:#4F4F4F;
+    border-radius: 4px;
+    padding: 12px;
+    color: #FFFF;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+}
+
+.button :hover{
+
+    background-color:#1f1e1e;
+    border-radius: 4px;
+    padding: 12px;
+    color: #FFFF;
+   
+    
+}
+
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+     "header header header"
+      "section section aside "
+      "footer footer footer";
+      grid-template-rows: 100px 500px 100px; 
+      grid-template-columns: 300px 100px 100px;
+      grid-column-gap:24px;
+      grid-row-gap:24px;
+ }
+ 
+ nav {
+    grid-area: header;
+    align-content: stretch;
+ }
+
+ 
+
+section {
+    grid-area: section;
+    align-content: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    
+   
+    
+    
+}
+
+section :hover {
+    background-color: #cc88c5;
+    transform: scale(2,1);
+    
+}
+
+section img{
+    width: 500px;
+    
+}
+section img :hover{
+    color: #cc88c5;
+}
+
+
+
+
+aside {
+    grid-area: aside;
+    
+}
+
+
+
+ footer {
+    grid-area: footer;
+    align-content: stretch;
+ }
+
+
+
+ @media only screen and (min-width: 320px) {
+	#grilla {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .nav {
+        background-color:$darksalmon;
+        
+     }
+     .section {
+        background-color: $mediumorange;
+        
+     }
+
+     .aside {
+         background-color: $mediumsalmon;
+         
+     }
+
+     .footer{
+        background-image: linear-gradient( to bottom, $blue, $salmon ) ;
+        
+     }
+
+      div h3{
+     	font-size: 14px;
+        color:black;
+        
+     }
+}
+
+
+
+ @media only screen and (max-width: 768px) {
+	#grilla {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .nav {
+        background-color: #7487F2;
+        
+     }
+     .section {
+        background-color: #E79DDF;
+        
+     }
+
+     .aside {
+         background-color: #F6CF5D;
+         
+     }
+
+     .footer{
+        background-image: linear-gradient( to top, #7487F2, #E79DDF ) ;
+        
+     }
+
+      div h3{
+     	font-size: 16px;
+        color:black;
+        
+     }
+}
+@media only screen and (min-width: 1024px) {
+	#grilla {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .nav {
+        background-color: #E79DDF;
+        
+     }
+
+     
+
+    
+     .section {
+        background-color: #F6CF5D;
+        
+     }
+
+     .aside {
+         background-color: #FD95B0;
+         
+     }
+
+     .footer{
+        background-image: linear-gradient( to bottom, #7487F2, #E79DDF ) ;
+        
+     }
+
+      div h3{
+     	font-size: 20px;
+        color:black;
+        
+     }
+}
